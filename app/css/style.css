@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* color */
+  --mainColor: #eaeaea;
+  --secodColor: #e3ba59;
+  --colorBlueDark: #213d75;
+  /* font */
+  --mainFont: "Work Sans", sans-serif;
+}
+
+/* hamburger Menu */
+.navbar-toggler {
+  border: 0;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon {
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+.toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: var(--secodColor);
+  border-radius: 12px;
+  display: block;
+  transition: all 1s ease-in-out;
+}
+.mid-bar {
+  margin: 5px auto;
+  background-color: var(--colorBlueDark);
+}
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggler .mid-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .mid-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/* navbar menu */
+.btn-simulasi {
+  /* background-color: #213d75; */
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid var(--secodColor);
+  outline: var(--secodColor);
+  text-decoration: none;
+  color: var(--colorBlueDark);
+  text-transform: uppercase;
+}
+
+/* hero section */
+#hero {
+  background-image: url("/assets/background/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.heading-left {
+  margin-top: 400px;
+}
+
+.heading-left .text__1 {
+  background: #e3ba59;
+  color: #ffff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 6px 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.heading-left .text__2 {
+  font-family: var(--mainFont);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 14px;
+  line-height: 110%;
+  color: #ffff;
+}
+
+.heading-left .text__3 {
+  font-family: var(--mainFont);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #ffff;
+}
+
+.heading-right {
+  margin-top: 100px;
+  display: block;
+}
+
+.heading-right .form-daftar {
+  justify-content: end;
+  display: flex;
+  text-align: baseline;
+}
+
+.heading-right .form-daftar .card {
+  width: 60%;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.heading-right .form-daftar .card h4 {
+  color: var(--colorBlueDark);
+  font-family: var(--mainFont);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.form-daftar .card form label {
+  font-weight: 500;
+  margin: 8px 4px;
+}
+
+.focus-form-input {
+  outline: none;
+  border: 0;
+  background-color: #ebebeb;
+  border-radius: 15px;
+  padding: 14px;
+  display: flex;
+  width: 100%;
+}
+
+.active-form-input {
+  outline: none;
+  border: 1px solid var(--secodColor);
+  background-color: #ffff;
+  border-radius: 15px;
+  padding: 14px;
+  display: flex;
+  width: 100%;
+}
+
+.selected-option {
+  border: 1px solid var(--secodColor);
+  background-color: #ffff;
+  border-radius: 15px;
+  padding: 14px;
+  display: flex;
+  width: 100%;
+}
+
+.form-daftar .card button {
+  outline: none;
+  border: 1px solid var(--secodColor);
+  border-radius: 15px;
+  padding: 16px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: #ffff;
+  color: var(--colorBlueDark);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* form responsive */
+#form-responsive {
+  display: none;
+  background-color: var(--colorBlueDark);
+}
+
+#form-responsive .form-daftar {
+  display: none;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+#form-responsive .form-daftar h4 {
+  text-align: center;
+}
+
+/* award */
+#award {
+  background-color: var(--secodColor);
+}
+
+#award .award-deskripsi {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 26px;
+  margin-bottom: 40px;
+}
+
+#award .award-deskripsi .award-icon {
+  padding-right: 16px;
+}
+
+#award .award-deskripsi .award-title {
+  padding-top: 20px;
+  color: #ffff;
+  font-size: 14px;
+  font-family: var(--mainFont);
+}
+
+#award .award-deskripsi .award-title span {
+  color: var(--colorBlueDark);
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.vertical-line {
+  height: 130px;
+  width: 1px;
+  padding: 0;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+/* keuntungan */
+#keuntungan {
+  padding-top: 50px;
+  font-family: var(--mainFont);
+}
+
+#keuntungan h1,
+#keuntungan h2 {
+  font-weight: 600;
+  font-size: 55px;
+}
+
+.bg-keuntungan .bg-keuntungan-1 {
+  width: 580px;
+  right: 0;
+  position: absolute;
+}
+.bg-keuntungan .bg-keuntungan-2 {
+  width: 415px;
+  right: 13rem;
+  position: absolute;
+}
+
+/* phone */
+@media (max-width: 576px) {
+  #award .col-lg-3 .award-deskripsi .award-title p {
+    font-size: 14px;
+  }
+
+  #award .col-lg-3 .award-deskripsi .award-title span {
+    font-size: 18px;
+  }
+
+  .icon-keuntungan {
+    padding-right: 50px !important;
+  }
+
+  #keuntungan h1,
+  #keuntungan h2 {
+    font-size: 30px !important;
+  }
+
+  .bg-keuntungan .bg-keuntungan-1 {
+    width: 240px !important;
+  }
+  .bg-keuntungan .bg-keuntungan-2 {
+    width: 172px !important;
+    right: 9rem;
+  }
+}
+
+/* media querys */
+/* tablet */
+@media (max-width: 768px) {
+  #hero .heading-left {
+    margin-top: 200px;
+    padding-left: 20px;
+  }
+  #hero .heading-left .text__1 {
+    font-size: 17px;
+  }
+
+  #hero .heading-left .text__2 {
+    font-size: 44px;
+    font-weight: 600;
+    margin-top: 14px;
+    line-height: 100%;
+  }
+  #keuntungan h1,
+  #keuntungan h2 {
+    font-size: 45px;
+  }
+}
+
+/* laptop */
+@media (max-width: 992px) {
+  .heading-right {
+    display: none;
+  }
+  .heading-right .form-daftar .card {
+    width: 100%;
+  }
+  #form-responsive {
+    display: block;
+  }
+
+  .form-daftar .card {
+    width: 550px;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  #award .award-deskripsi {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  #award .award-deskripsi .award-title p {
+    padding-top: 0;
+    font-size: 16px;
+  }
+
+  #award .award-deskripsi .award-title span {
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .vertical-line {
+    width: 80%;
+    height: 1px;
+    padding: 0;
+    margin: 50px;
+    background-color: #fff;
+  }
+  .bg-keuntungan .bg-keuntungan-1 {
+    width: 440px;
+  }
+  .bg-keuntungan .bg-keuntungan-2 {
+    width: 315px;
+  }
+}
+
+/* pc */
+@media (max-width: 1200px) {
+  .heading-left {
+    margin-top: 400px;
+  }
+  .heading-left .text__1 {
+    font-size: 16px;
+  }
+
+  .heading-left .text__2 {
+    font-size: 54px;
+    font-weight: 600;
+    margin-top: 14px;
+    line-height: 100%;
+  }
+
+  .heading-right .form-daftar .card {
+    width: 80%;
+  }
+}
