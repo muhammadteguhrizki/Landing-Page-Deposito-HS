@@ -71,7 +71,7 @@
 
 /* hero section */
 #hero {
-  background-image: url("/assets/background/bg.png");
+  background-image: url("../../assets/background/banner.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -257,12 +257,37 @@
 .bg-keuntungan .bg-keuntungan-1 {
   width: 580px;
   right: 0;
+  display: flex;
   position: absolute;
 }
 .bg-keuntungan .bg-keuntungan-2 {
   width: 415px;
-  right: 13rem;
-  position: absolute;
+  right: -9rem;
+  display: flex;
+  position: relative;
+}
+
+/* CTA */
+#cta {
+  background-color: var(--secodColor);
+  font-family: var(--mainFont);
+}
+
+#cta .text__cta h3 {
+  font-weight: bold !important;
+}
+
+.btn-open-tab {
+  /* background-color: #213d75; */
+  padding: 10px 50px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid var(--colorBlueDark);
+  outline: var(--secodColor);
+  text-decoration: none;
+  color: var(--colorBlueDark);
+  text-transform: uppercase;
 }
 
 /* phone */
@@ -289,7 +314,7 @@
   }
   .bg-keuntungan .bg-keuntungan-2 {
     width: 172px !important;
-    right: 9rem;
+    right: -8rem !important;
   }
 }
 
@@ -361,6 +386,7 @@
   }
   .bg-keuntungan .bg-keuntungan-2 {
     width: 315px;
+    right: -10rem !important;
   }
 }
 
@@ -382,5 +408,8 @@
 
   .heading-right .form-daftar .card {
     width: 80%;
+  }
+  .bg-keuntungan .bg-keuntungan-2 {
+    right: 5rem;
   }
 }
