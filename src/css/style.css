@@ -339,6 +339,9 @@
   #keuntungan h2 {
     font-size: 45px;
   }
+  #cta .text__cta h3 {
+    text-align: center;
+  }
 }
 
 /* laptop */
