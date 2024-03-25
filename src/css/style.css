@@ -390,6 +390,73 @@
   object-fit: cover;
 }
 
+/* dalam pengawasasn */
+#pengawasan .icon-dalam-pengawasan img {
+  filter: grayscale(100%);
+}
+
+/* footer */
+#footer {
+  background-color: var(--colorBlueDark);
+  font-family: var(--mainFont);
+}
+
+#footer .maps {
+  border-radius: 11px;
+  border: 0;
+  width: 600px;
+  min-height: 250px;
+}
+
+.footer .footer-logo img {
+  width: 260px;
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 25px;
+  padding-top: 24px;
+}
+
+.footer-contact ul {
+  color: #ffff;
+}
+
+.footer-contact ul li {
+  line-height: 45px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact ul li ion-icon {
+  margin-right: 20px;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.footer-contact ul li a {
+  text-decoration: none;
+  color: #ffff;
+  display: flex;
+  font-family: var(--mainFont);
+}
+
+.footer-contact ul li:nth-child(2) a {
+  text-decoration: underline;
+}
+.footer-contact ul li:nth-child(3) {
+  line-height: 35px;
+  display: flex;
+  align-items: baseline;
+}
+
+footer {
+  color: #ffff;
+  font-family: var(--mainFont);
+  background-color: #193365;
+  text-align: center;
+  padding: 20px 0;
+}
+
 /* phone */
 @media (max-width: 576px) {
   #award .col-lg-3 .award-deskripsi .award-title p {
@@ -421,6 +488,9 @@
   }
   #testimoni .row .card-man-testimoni .title__description {
     font-size: 10px;
+  }
+  #pengawasan .icon-dalam-pengawasan {
+    gap: 40px;
   }
 }
 
@@ -496,6 +566,9 @@
   .bg-keuntungan .bg-keuntungan-2 {
     width: 315px;
     right: -10rem !important;
+  }
+  #pengawasan .icon-dalam-pengawasan {
+    gap: 15px;
   }
 }
 
