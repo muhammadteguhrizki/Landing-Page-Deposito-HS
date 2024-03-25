@@ -248,10 +248,14 @@
   font-family: var(--mainFont);
 }
 
-#keuntungan h1,
-#keuntungan h2 {
+#keuntungan .text__keuntungan_1 h3 {
+  font-family: var(--mainFont);
   font-weight: 600;
-  font-size: 55px;
+  font-size: 45px;
+}
+
+#keuntungan .col h3 {
+  font-weight: 600;
 }
 
 .bg-keuntungan .bg-keuntungan-1 {
@@ -290,6 +294,102 @@
   text-transform: uppercase;
 }
 
+/* Langkh deposito */
+#langkah-dep .col h3 {
+  font-family: var(--mainFont);
+  font-weight: 600;
+  font-size: 45px;
+}
+
+#langkah-dep .row .open-dep {
+  position: relative;
+  display: flex;
+  border-radius: 15px;
+  min-height: 350px;
+}
+
+#langkah-dep .row .langkah__1 {
+  background-color: #d9d9d9;
+}
+
+#langkah-dep .row .langkah__2 {
+  background-color: var(--colorBlueDark);
+  color: #ffff;
+}
+
+#langkah-dep .row .langkah__3 {
+  background-color: var(--secodColor);
+}
+
+#langkah-dep .row .open-dep img {
+  position: absolute;
+}
+
+#langkah-dep .row .open-dep h4 {
+  padding: 15px 25px;
+  margin-top: 30px;
+  font-family: var(--mainFont);
+  font-weight: 600;
+  z-index: 1;
+}
+
+#langkah-dep .row .open-dep p {
+  padding: 0px 25px;
+  font-family: var(--mainFont);
+}
+
+#langkah-dep .row .open-dep .btn-mulai {
+  /* background-color: #213d75; */
+  padding: 10px 50px;
+  text-align: center;
+  font-weight: 700;
+  margin: 20px auto;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid var(--colorBlueDark);
+  outline: var(--secodColor);
+  text-decoration: none;
+  color: var(--colorBlueDark);
+  text-transform: uppercase;
+}
+
+/* testimoni */
+#testimoni {
+  background-color: var(--colorBlueDark);
+  font-family: var(--mainFont);
+}
+
+#testimoni .row .col h3 {
+  font-family: var(--mainFont);
+  color: #fff;
+  font-size: 45px;
+}
+
+#testimoni .row .card-man-testimoni {
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 500px;
+  height: 180px;
+  padding: 0px;
+}
+
+#testimoni .row .card-man-testimoni .title__testimoni {
+  color: var(--colorBlueDark);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#testimoni .row .card-man-testimoni .title__work {
+  color: var(--secodColor);
+  margin-top: -10px;
+}
+
+#testimoni .row .card-man-testimoni .row .image-testimoni {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* phone */
 @media (max-width: 576px) {
   #award .col-lg-3 .award-deskripsi .award-title p {
@@ -315,6 +415,12 @@
   .bg-keuntungan .bg-keuntungan-2 {
     width: 172px !important;
     right: -8rem !important;
+  }
+  #testimoni .row .card-man-testimoni {
+    height: 160px;
+  }
+  #testimoni .row .card-man-testimoni .title__description {
+    font-size: 10px;
   }
 }
 
