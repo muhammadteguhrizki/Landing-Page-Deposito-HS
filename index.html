@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./app/bootstrap/css/bootstrap.min.css" />
     <!-- My css -->
     <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/modal.css" />
     <link rel="icon" href="./assets/icon/icon_hs.png" />
     <!-- jquery -->
     <script
@@ -46,7 +47,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <a href="#" class="btn-simulasi">Simulasi Deposito</a>
+            <a type="button" data-bs-toggle="modal" data-bs-target="#simulasiDep" class="btn-simulasi">Simulasi Deposito</a>
           </ul>
         </div>
       </div>
@@ -240,8 +241,8 @@
               <span><img src="./assets/icon/growth.png" alt="images"></span>
             </div>
             <div class="col">
-              <h3>Bungan Lebih Tinggi</h3>
-              <p>Dapatkan keuntungan lebih optimal dari uang Anda.</p>
+              <h3>Dapat bunga EXTRA cashback</h3>
+              <p>Anda bisa mendapatkan bunga menarik sekaligus cashback.</p>
             </div>
            </div>
            <div class="col d-flex aling-items-center justify-content-between mb-4 mt-3">
@@ -249,8 +250,8 @@
               <img src="./assets/icon/secure.png" alt="images">
             </div>
             <div class="col">
-             <h3>Jaminan keamanan</h3>
-              <p>Dana Anda dijamin oleh Lembaga Penjamin Simpanan (LPS).</p>
+             <h3>Proses aman dan cepat</h3>
+              <p>Uang Anda dijamin oleh LPS dan diproses cepat oleh personal banker kami.</p>
             </div>
            </div>
            <div class="col d-flex aling-items-center justify-content-between mb-4 mt-3">
@@ -259,7 +260,7 @@
             </div>
             <div class="col">
               <h3>Jangka waktu fleksibel</h3>
-              <p>Pilih jangka waktu yang sesuai dengan kebutuhan Anda, mulai dari 1 bulan hingga 24 bulan.</p>
+              <p>Pilih jangka waktu yang sesuai dengan kebutuhan Anda, mulai dari 1 bulan hingga 12 bulan.</p>
             </div>
            </div>
            <div class="col-lg-12 mb-3 mt-4">
@@ -284,7 +285,7 @@
           </div>
           <div class="col-md-6 text-center">
              <div class="col-lg-12 mb-3 mt-4">
-               <a href="#" class="btn-open-tab">Buka Tabungan</a>
+               <a href="#" class="btn-open-tab">Deposito Sekarang</a>
             </div>
           </div>
         </div>
@@ -416,11 +417,11 @@
       <div class="container">
         <div class="row d-flex align-items-center justify-content-between pt-4 pb-3">
           <div class="col-md-6 text__cta">
-            <h3>Dapatkan Bunga Tinggi Hingga xx% dengan Deposito Bank Hariarta</h3>
+            <h3>Dapatkan bunga tinggi hingga 6,75% + Cashback 1 Juta dengan deposito Bank Hariarta.</h3>
           </div>
           <div class="col-md-6 text-center">
              <div class="col-lg-12 mb-3 mt-4">
-               <a href="#" class="btn-open-tab">Buka Tabungan</a>
+               <a href="#" class="btn-open-tab">Deposito Sekarang</a>
             </div>
           </div>
         </div>
@@ -493,6 +494,24 @@
         <small>All rights reserved 2024, PT. BPR Hariarta Sedana.</small>
       </footer>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="simulasiDep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Simulasi Deposito</h5>
+            <button type="button" class="btn-closed" data-bs-dismiss="modal">
+              <span class="toggler-icon left-bar"></span>
+              <span class="toggler-icon right-bar"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+    </div>
     
 
 

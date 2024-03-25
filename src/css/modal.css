@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* color */
+  --mainColor: #eaeaea;
+  --secodColor: #e3ba59;
+  --colorBlueDark: #213d75;
+  /* font */
+  --mainFont: "Work Sans", sans-serif;
+}
+
+#simulasiDep .modal-header,
+#simulasiDep .modal-body {
+  background-color: var(--colorBlueDark);
+  font-family: var(--mainFont);
+  color: #ffff;
+}
+
+.btn-closed {
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+}
+
+.btn-closed .left-bar {
+  width: 30px;
+  height: 3px;
+  background-color: var(--secodColor);
+  transform: rotate(45deg) translate(2px, 0px);
+}
+
+.btn-closed .right-bar {
+  width: 30px;
+  height: 3px;
+  background-color: #ffff;
+  transform: rotate(-45deg) translate(2px, 0px);
+}
