@@ -48,8 +48,16 @@ function hitung() {
 
 document.getElementById("nominal").addEventListener("input", function () {
   var nominal = this.value * 10000000;
-  document.getElementById("nominalValue").textContent =
+  document.getElementById("nominalValue").value =
     "Rp " + nominal.toLocaleString() + ".-";
+});
+
+document.getElementById("nominalValue").addEventListener("input", function () {
+  var value = this.value.replace(/[^\d]/g, ""); // Hapus karakter non-digit
+  if (value !== "") {
+    var nominal = parseInt(value);
+    document.getElementById("nominal").value = nominal / 10000000;
+  }
 });
 
 document.getElementById("tenor").addEventListener("input", function () {
