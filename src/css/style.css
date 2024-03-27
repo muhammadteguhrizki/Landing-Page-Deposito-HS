@@ -9,6 +9,10 @@
   --mainFont: "Work Sans", sans-serif;
 }
 
+html {
+  scroll-padding-top: 4rem;
+}
+
 /* hamburger Menu */
 .navbar-toggler {
   border: 0;
@@ -200,6 +204,7 @@
   justify-content: center;
   padding: 60px 20px;
 }
+
 #form-responsive .form-daftar h4 {
   text-align: center;
 }
@@ -459,6 +464,7 @@ footer {
 }
 
 /* phone */
+/* media querys */
 @media (max-width: 576px) {
   #award .col-lg-3 .award-deskripsi .award-title p {
     font-size: 14px;
@@ -495,7 +501,6 @@ footer {
   }
 }
 
-/* media querys */
 /* tablet */
 @media (max-width: 768px) {
   #hero .heading-left {

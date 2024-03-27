@@ -16,6 +16,7 @@ function hitung() {
   // rumus deposito
   var totalBunga = nominal * bunga * (tenor / 12);
   var totalAkhir = nominal + totalBunga;
+  // var nilaiBunga =
 
   var hasil = `
     <div class="form-group mb-3">
