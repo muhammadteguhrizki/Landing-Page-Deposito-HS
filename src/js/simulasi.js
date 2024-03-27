@@ -15,23 +15,19 @@ function hitung() {
 
   // rumus deposito
   var totalBunga = nominal * bunga * (tenor / 12);
-  var totalAkhir = nominal + totalBunga;
-  // var nilaiBunga =
+  var pajak = totalBunga * 0.2;
+  var nilaiBunga = totalBunga - pajak;
+  var totalAkhir = nominal + nilaiBunga;
 
   var hasil = `
     <div class="form-group mb-3">
-        <span>Nominal</span>
-        <h3>Rp ${nominal.toLocaleString()}</h3>
-    </div>
-    <hr>
-    <div class="form-group mb-3">
-        <span>Bunga</span>
-        <h3>${(bunga * 100).toFixed(2)}%</h3>
+      <span>Nilai bunga</span>
+      <h3>Rp ${totalBunga.toLocaleString()}</h3>
     </div>
     <hr>
     <div class="form-group mb-3">
       <span>Pajak bunga 20%</span>
-      <h3>Rp ${totalBunga.toLocaleString()}</h3>
+      <h3>Rp ${nilaiBunga.toLocaleString()}</h3>
     </div>
     <hr>
     <div class="form-group mb-3">
