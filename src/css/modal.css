@@ -16,6 +16,11 @@
   color: #ffff;
 }
 
+.icon-close-modal {
+  background-color: var(--colorBlueDark);
+  padding: 5px;
+}
+
 .btn-closed {
   border: 0;
   box-shadow: none;
@@ -35,4 +40,82 @@
   height: 3px;
   background-color: #ffff;
   transform: rotate(-45deg) translate(2px, 0px);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#nominalValue,
+#tenorValue,
+#sukuBunga {
+  color: var(--secodColor);
+  font-weight: 400;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  /* font-weight: bold; */
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+#hasil {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--colorBlueDark);
+  color: var(--secodColor);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#hasil span {
+  color: #ffff;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--colorBlueDark);
+  border: 0;
+}
+
+.modal-footer .btn-open-dep {
+  padding: 10px 170px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid var(--secodColor);
+  outline: var(--secodColor);
+  text-decoration: none;
+  color: #ffff;
+  text-transform: uppercase;
+}
+
+/* laptop */
+@media (max-width: 992px) {
+  .modal-footer .btn-open-dep {
+    padding: 10px 60px;
+  }
 }
