@@ -2,6 +2,7 @@ function hitung() {
   var nominal = document.getElementById("nominal").value * 10000000; // konversi ke nominal dalam rupiah
   var tenor = parseInt(document.getElementById("tenor").value);
   var bunga;
+  bunga = 0.0675;
 
   // if (nominal <= 50000000) {
   //   bunga = 0.05;
@@ -11,13 +12,11 @@ function hitung() {
   //   bunga = 0.07;
   // }
 
-  bunga = 0.0675;
-
   // rumus deposito
   var totalBunga = nominal * bunga * (tenor / 12);
-  var pajak = totalBunga * 0.2;
-  var nilaiBunga = totalBunga - pajak;
-  var totalAkhir = nominal + nilaiBunga;
+  var pajak = totalBunga * 0.2; // pajak  20%
+  var nilaiPajakBunga = totalBunga - pajak;
+  var totalAkhir = nominal + nilaiPajakBunga;
 
   var hasil = `
     <div class="form-group mb-3">
@@ -27,7 +26,7 @@ function hitung() {
     <hr>
     <div class="form-group mb-3">
       <span>Pajak bunga 20%</span>
-      <h3>Rp ${nilaiBunga.toLocaleString()}</h3>
+      <h3>Rp ${nilaiPajakBunga.toLocaleString()}</h3>
     </div>
     <hr>
     <div class="form-group mb-3">
