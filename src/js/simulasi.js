@@ -1,5 +1,5 @@
 function hitung() {
-  var nominal = document.getElementById("nominal").value * 1000000; // konversi ke nominal dalam rupiah
+  var nominal = document.getElementById("nominal").value * 10000000; // konversi ke nominal dalam rupiah
   var tenor = parseInt(document.getElementById("tenor").value);
   var bunga;
 
@@ -43,8 +43,16 @@ function hitung() {
   document.getElementById("hasil").innerHTML = hasil;
 }
 
+// document.getElementById("nominal").addEventListener("input", function () {
+//   document.getElementById("nominalValue").textContent = (
+//     this.value * 10000000
+//   ).toLocaleString();
+// });
+
 document.getElementById("nominal").addEventListener("input", function () {
-  document.getElementById("nominalValue").textContent = this.value;
+  var nominal = this.value * 10000000;
+  document.getElementById("nominalValue").textContent =
+    "Rp " + nominal.toLocaleString() + ".-";
 });
 
 document.getElementById("tenor").addEventListener("input", function () {

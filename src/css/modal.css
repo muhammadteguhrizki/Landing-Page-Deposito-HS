@@ -92,6 +92,10 @@ input[type="range"] {
   color: #ffff;
 }
 
+#hasil h3 {
+  font-weight: 400;
+}
+
 .modal-footer {
   display: flex;
   justify-content: center;

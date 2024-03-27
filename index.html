@@ -516,7 +516,7 @@
            <div class="form-group mb-3">
               <label for="nominal">Nominal Penempatan</label>
                   <h3 id="nominalValue">Rp .-</h3>
-                  <input type="range" id="nominal" name="nominal" min="1" max="100" step="1" value="1">
+                  <input type="range" id="nominal" name="nominal" min="1" max="10000" step="1" value="1">
               <div class="d-flex justify-content-between">
                   <div>Rp 10 juta</div>
                   <div>Rp 100 miliar</div>
@@ -526,7 +526,13 @@
             <div class="form-group mb-3">
               <label for="tenor">Tenor</label>
               <h3 id="tenorValue">1 bulan</h3>
-              <input type="range" id="tenor" name="tenor" min="1" max="12" step="1" value="1">
+              <input type="range" id="tenor" name="tenor" min="1" max="12" step="1" value="1" oninput="checkTenor(this.value)">
+              <!-- <datalist id="tenorList">
+                <option value="1">1 bulan</option>
+                <option value="3">3 bulan</option>
+                <option value="6">6 bulan</option>
+                <option value="12">12 bulan</option>
+              </datalist> -->
                <div class="d-flex justify-content-between">
                   <div>1 bulan</div>
                   <div>12 bulan</div>
@@ -592,4 +598,19 @@
           }
       });
     </script>
+
+    <script>
+      function checkTenor(value) {
+        var validValues = [1, 3, 6, 12];
+        if (!validValues.includes(value)) {
+          // nilai dekat dengan nilai yang dipilih
+          var closestValue = validValues.reduce(function(prev, curr) {
+            return (Math.abs(curr - value) < Math.abs(prev - value) ? curr : prev);
+          });
+          value = closestValue;
+          document.getElementById("tenor").value = closestValue;
+        }
+        document.getElementById("tenorValue").textContent = value + " bulan";
+      }
+  </script>
 </html>
