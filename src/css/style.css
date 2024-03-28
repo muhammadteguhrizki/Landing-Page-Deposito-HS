@@ -463,8 +463,8 @@ footer {
   padding: 20px 0;
 }
 
-/* phone */
 /* media querys */
+/* phone */
 @media (max-width: 576px) {
   #award .col-lg-3 .award-deskripsi .award-title p {
     font-size: 14px;

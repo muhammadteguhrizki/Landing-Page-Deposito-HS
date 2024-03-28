@@ -10,7 +10,6 @@ function hitung() {
     bunga = 0.0675; // 6,75%
   }
 
-  // rumus deposito hariarta sedana
   // var totalBunga = ((nominal * bunga * 30) / 366) * tenor;
   var totalBunga = Math.round((nominal * bunga * 30) / 366) * tenor;
   // var pajak = Math.round(totalBunga * 0.2); // pajak  20%

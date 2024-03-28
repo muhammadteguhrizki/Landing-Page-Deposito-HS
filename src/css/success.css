@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* color */
+  --mainColor: #eaeaea;
+  --secodColor: #e3ba59;
+  --colorBlueDark: #213d75;
+  /* font */
+  --mainFont: "Work Sans", sans-serif;
+}
+
+#success {
+  position: relative;
+  min-height: 80vh;
+  background-image: url("../../assets/background/city-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#success::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colorBlueDark);
+  mix-blend-mode: multiply;
+}
+
+#success h1 {
+  font-family: var(--mainFont);
+  color: #ffff;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 150%;
+  position: relative;
+}
+
+.btn-back {
+  /* background-color: #213d75; */
+  padding: 10px 40px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid var(--secodColor);
+  outline: var(--secodColor);
+  text-decoration: none;
+  color: #ffff;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 110% !important;
+}
+
+/* media querys */
+/* phone */
+@media (max-width: 576px) {
+  #success h1 {
+    font-size: 28px !important;
+  }
+  .btn-back {
+    font-size: 12px !important;
+  }
+}
