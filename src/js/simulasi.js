@@ -14,7 +14,7 @@ function hitung() {
   var totalBunga = nominal * bunga * (tenor / 12);
   var pajak = totalBunga * 0.2; // pajak  20%
   var nilaiPajakBunga = totalBunga - pajak;
-  var totalAkhir = nominal + nilaiPajakBunga;
+  var totalAkhir = nominal + nilaiPajakBunga - pajak;
 
   var hasil = `
     <div class="form-group mb-3">
