@@ -35,11 +35,6 @@ function hitung() {
     </div>
     <hr>
     <div class="form-group mb-3">
-      <span>Nilai bunga</span>
-      <h3>Rp ${totalBunga.toLocaleString()}</h3>
-    </div>
-    <hr>
-    <div class="form-group mb-3">
       <span>Bunga net</span>
       <h3>Rp ${nilaiPajakBunga.toLocaleString()}</h3>
     </div>
