@@ -70,7 +70,7 @@
           <div id="form-daftar-1" class="form-daftar">
             <div class="card shadow">
               <h4>Lorem Ipsum is simply dummy text of the printing for CTA</h4>
-              <form action="" class="mt-4">
+              <form action="" id="submit-to-google-sheet1" class="mt-4">
                 <div class="mb-3">
                   <label for="nama">Nama *</label>
                   <br />
@@ -78,7 +78,7 @@
                     type="text"
                     class="form-input focus-form-input"
                     id="nama"
-                    name=""
+                    name="name"
                     placeholder="Nama Lengkap Anda"
                   />
                 </div>
@@ -89,7 +89,7 @@
                     type="email"
                     class="form-input focus-form-input"
                     id="email"
-                    name=""
+                    name="email"
                     placeholder="Alamat Email Anda"
                   />
                 </div>
@@ -100,14 +100,14 @@
                     type="text"
                     class="form-input focus-form-input"
                     id="telepon"
-                    name=""
+                    name="telepon"
                     placeholder="Nomor telepon / Whatsapp"
                   />
                 </div>
                 <div class="mb-3">
                   <label for="produk">Pilihan Produk *</label>
                   <br />
-                  <select class="focus-form-input" id="produk1">
+                  <select class="focus-form-input" name="produk" id="produk1">
                     <option selected>Pilih Produk Investasi Anda</option>
                     <option value="D01">DEPOSITO BERJANGKA 1 BLN</option>
                     <option value="D03">DEPOSITO BERJANGKA 3 BLN</option>
@@ -116,7 +116,10 @@
                   </select>
                 </div>
                 <div class="mt-4">
-                  <button type="submit" id="btn-daftar">Mulai Sekarang</button>
+                  <button type="submit" class="btn-daftar send-btn">Mulai Sekarang</button>
+                  <button type="submit" class="btn-daftar loading-btn d-none" disabled>
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading... 
+                  </button>
                 </div>
               </form>
             </div>
@@ -132,7 +135,7 @@
         <div id="form-daftar-2" class="form-daftar">
             <div class="card shadow">
               <h4>Lorem Ipsum is simply dummy text of the printing for CTA</h4>
-              <form action="" class="mt-4">
+              <form action="" id="submit-to-google-sheet2" class="mt-4">
                 <div class="mb-3">
                   <label for="nama">Nama</label>
                   <br />
@@ -140,7 +143,7 @@
                     type="text"
                     class="form-input focus-form-input"
                     id="nama"
-                    name=""
+                    name="name"
                     placeholder="Nama Lengkap Anda"
                   />
                 </div>
@@ -151,7 +154,7 @@
                     type="email"
                     class="form-input focus-form-input"
                     id="email"
-                    name=""
+                    name="email"
                     placeholder="Alamat Email Anda"
                   />
                 </div>
@@ -162,14 +165,14 @@
                     type="text"
                     class="form-input focus-form-input"
                     id="telepon"
-                    name=""
+                    name="telepon"
                     placeholder="Nomor telepon / Whatsapp"
                   />
                 </div>
                 <div class="mb-3">
                   <label for="produk">Pilihan Produk</label>
                   <br />
-                  <select class="focus-form-input" id="produk2">
+                  <select class="focus-form-input" name="produk" id="produk2">
                     <option selected>Pilih Produk Investasi Anda</option>
                     <option value="D01">DEPOSITO BERJANGKA 1 BLN</option>
                     <option value="D03">DEPOSITO BERJANGKA 3 BLN</option>
@@ -178,7 +181,10 @@
                   </select>
                 </div>
                 <div class="mt-4">
-                  <button type="submit" id="btn-daftar">Mulai Sekarang</button>
+                   <button type="submit" class="btn-daftar send-btn">Mulai Sekarang</button>
+                  <button type="submit" class="btn-daftar loading-btn d-none" disabled>
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading... 
+                  </button>
                 </div>
               </form>
             </div>
@@ -578,6 +584,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="./src/js/script.js"></script>
     <script type="text/javascript" src="./src/js/simulasi.js"></script>
+    <script type="text/javascript" src="./src/js/submit.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script type="text/javascript">
@@ -625,4 +632,5 @@
         document.getElementById("tenorValue").textContent = value + " bulan";
       }
   </script>
+  </body>
 </html>

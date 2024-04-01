@@ -177,7 +177,7 @@ html {
   width: 100%;
 }
 
-.form-daftar .card button {
+.form-daftar .card .btn-daftar {
   outline: none;
   border: 1px solid var(--secodColor);
   border-radius: 15px;
