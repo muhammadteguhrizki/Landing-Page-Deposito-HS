@@ -1,6 +1,7 @@
 function hitung() {
-  var nominal = document.getElementById("nominal").value * 5000000; // konversi ke nominal dalam rupiah start deposito
+  var nominal = document.getElementById("nominal").value * 1; // konversi ke nominal dalam rupiah start deposito
   var tenor = parseInt(document.getElementById("tenor").value);
+
   var bunga;
 
   // bunga = 0.0675;
@@ -26,7 +27,7 @@ function hitung() {
   var hasil = `
     <div class="form-group mb-3">
       <span>Nominal</span>
-      <h3>Rp ${nominal.toLocaleString()}</h3>
+      <h3>Rp ${nominal.toLocaleString("id-ID")}</h3>
     </div>
     <hr>
     <div class="form-group mb-3">
@@ -36,12 +37,12 @@ function hitung() {
     <hr>
     <div class="form-group mb-3">
       <span>Bunga net</span>
-      <h3>Rp ${nilaiPajakBunga.toLocaleString()}</h3>
+      <h3>Rp ${nilaiPajakBunga.toLocaleString("id-ID")}</h3>
     </div>
     <hr>
     <div class="form-group mb-3">
       <span>Total akumulasi deposito</span>
-      <h3>Rp ${totalAkhir.toLocaleString()}</h3>
+      <h3>Rp ${totalAkhir.toLocaleString("id-ID")}</h3>
     </div>
     <hr>
   `;
@@ -49,33 +50,38 @@ function hitung() {
   document.getElementById("hasil").innerHTML = hasil;
 }
 
-// document.getElementById("nominal").addEventListener("input", function () {
-//   document.getElementById("nominalValue").textContent = (
-//     this.value * 5000000
-//   ).toLocaleString();
-// });
-
 document.getElementById("nominal").addEventListener("input", function () {
-  var nominal = this.value * 5000000;
+  var nominal = this.value * 1;
   document.getElementById("nominalValue").value =
-    "Rp " + nominal.toLocaleString() + ".-";
+    nominal.toLocaleString("id-ID");
 });
 
 document.getElementById("nominalValue").addEventListener("input", function () {
   var value = this.value.replace(/[^\d]/g, ""); // Hapus karakter non-digit
   if (value !== "") {
     var nominal = parseInt(value);
-    document.getElementById("nominal").value = nominal / 5000000;
+    document.getElementById("nominal").value = nominal / 1;
   }
 });
 
-// document.getElementById("tenor").addEventListener("input", function () {
-//   document.getElementById("tenorValue").textContent = this.value + " bulan";
-// });
-
 document.getElementById("tenor").addEventListener("input", function () {
   var tenor = parseInt(this.value);
-  document.getElementById("tenorValue").textContent = tenor + " bulan";
+  var bulan;
+
+  if (tenor === 1) {
+    bulan = 1;
+  } else if (tenor === 2) {
+    bulan = 3;
+  } else if (tenor === 3) {
+    bulan = 6;
+  } else if (tenor === 4) {
+    bulan = 12;
+  } else {
+    // Nilai default jika tidak sesuai
+    bulan = 1;
+  }
+
+  document.getElementById("tenorValue").textContent = bulan + " bulan";
 
   var bunga;
   if (tenor <= 1) {

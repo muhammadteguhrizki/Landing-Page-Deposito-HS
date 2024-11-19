@@ -10,7 +10,7 @@
 }
 
 html {
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 6rem;
 }
 
 /* hamburger Menu */
@@ -71,81 +71,19 @@ html {
   text-decoration: none;
   color: var(--colorBlueDark);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* hero section */
 #hero {
-  background-image: url("../../assets/background/banner.png");
+  position: relative;
+}
+
+#hero img {
+  position: relative;
+  height: auto;
+  width: 100%;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-}
-
-.heading-left {
-  margin-top: 400px;
-}
-
-.heading-left .text__1 {
-  background: #e3ba59;
-  color: #ffff;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 6px 20px;
-  text-transform: uppercase;
-  font-weight: 600;
-  border-radius: 10px;
-}
-
-.heading-left .text__2 {
-  font-family: var(--mainFont);
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 600;
-  margin-top: 14px;
-  line-height: 110%;
-  text-align: start;
-  color: #ffff;
-}
-
-.heading-left .text__3 {
-  font-family: var(--mainFont);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-  color: #ffff;
-}
-
-.heading-right {
-  margin-top: 100px;
-  display: block;
-}
-
-.heading-right .form-daftar {
-  justify-content: end;
-  display: flex;
-  text-align: baseline;
-}
-
-.heading-right .form-daftar .card {
-  width: 60%;
-  border-radius: 20px;
-  flex-direction: column;
-  padding: 24px;
-}
-
-.heading-right .form-daftar .card h4 {
-  color: var(--colorBlueDark);
-  font-family: var(--mainFont);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%;
-}
-
-.form-daftar .card form label {
-  font-weight: 500;
-  margin: 8px 4px;
 }
 
 .focus-form-input {
@@ -177,7 +115,21 @@ html {
   width: 100%;
 }
 
-.form-daftar .card .btn-daftar {
+/* form deposito*/
+#form-daftar {
+  justify-content: center;
+  display: flex;
+  margin: 40px 0;
+}
+
+#form-daftar .cards {
+  width: 100%;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 26px;
+}
+
+.btn-modify-1 {
   outline: none;
   border: 1px solid var(--secodColor);
   border-radius: 15px;
@@ -192,21 +144,38 @@ html {
   margin-bottom: 15px;
 }
 
-/* form responsive */
-#form-responsive {
-  display: none;
-  background-color: var(--colorBlueDark);
-}
-
-#form-responsive .form-daftar {
-  display: none;
+.btn-modify-2 {
+  outline: none;
+  text-decoration: none;
+  border: 1px solid var(--secodColor);
+  border-radius: 15px;
+  padding: 16px;
   display: flex;
+  width: 100%;
   justify-content: center;
-  padding: 60px 20px;
+  background-color: var(--colorBlueDark);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-#form-responsive .form-daftar h4 {
-  text-align: center;
+@media (min-width: 992px) {
+  #form-daftar {
+    position: absolute;
+    display: flex;
+    top: 25%;
+    width: 20%;
+    right: 10%;
+  }
+
+  #form-daftar .cards {
+    min-width: 80%;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 26px;
+    background-color: #ffffff;
+  }
 }
 
 /* award */
@@ -241,10 +210,10 @@ html {
 }
 
 .vertical-line {
-  height: 130px;
+  min-height: 100%;
   width: 1px;
   padding: 0;
-  margin-top: 20px;
+  margin: 20px 0px;
   background-color: #fff;
 }
 
@@ -252,6 +221,7 @@ html {
 #keuntungan {
   padding-top: 45px;
   font-family: var(--mainFont);
+  overflow: hidden;
 }
 
 #keuntungan .text__keuntungan_1 h3 {
@@ -503,20 +473,6 @@ footer {
 
 /* tablet */
 @media (max-width: 768px) {
-  #hero .heading-left {
-    margin-top: 200px;
-    padding-left: 20px;
-  }
-  #hero .heading-left .text__1 {
-    font-size: 17px;
-  }
-
-  #hero .heading-left .text__2 {
-    font-size: 44px;
-    font-weight: 600;
-    margin-top: 14px;
-    line-height: 100%;
-  }
   #keuntungan h1,
   #keuntungan h2 {
     font-size: 45px;
@@ -528,23 +484,6 @@ footer {
 
 /* laptop */
 @media (max-width: 992px) {
-  .heading-right {
-    display: none;
-  }
-  .heading-right .form-daftar .card {
-    width: 100%;
-  }
-  #form-responsive {
-    display: block;
-  }
-
-  .form-daftar .card {
-    width: 550px;
-    border-radius: 20px;
-    flex-direction: column;
-    padding: 24px;
-  }
-
   #award .award-deskripsi {
     margin-top: 10px;
     margin-bottom: 0px;
@@ -560,11 +499,7 @@ footer {
     text-transform: uppercase;
   }
   .vertical-line {
-    width: 80%;
-    height: 1px;
-    padding: 0;
-    margin: 50px;
-    background-color: #fff;
+    display: none;
   }
   .bg-keuntungan .bg-keuntungan-1 {
     width: 440px;
@@ -580,23 +515,6 @@ footer {
 
 /* pc */
 @media (max-width: 1200px) {
-  .heading-left {
-    margin-top: 400px;
-  }
-  .heading-left .text__1 {
-    font-size: 16px;
-  }
-
-  .heading-left .text__2 {
-    font-size: 54px;
-    font-weight: 600;
-    margin-top: 14px;
-    line-height: 100%;
-  }
-
-  .heading-right .form-daftar .card {
-    width: 80%;
-  }
   .bg-keuntungan .bg-keuntungan-2 {
     right: 5rem;
   }

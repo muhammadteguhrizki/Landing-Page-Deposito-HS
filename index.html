@@ -18,6 +18,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JN1WTCTCW3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JN1WTCTCW3');
+    </script>
     <title>Deposito | Bank Hariarta Sedana</title>
   </head>
   <body>
@@ -54,143 +63,45 @@
     </nav>
 
     <section id="hero">
-     <div class="container-sm">
-      <div class="row justify-content-center aling-items-center">
-        <div class="col-lg-6 d-md-12 mb-4 heading-left">
-          <a href="#" class="text__1">Deposito Bank Hariarta </a>
-          <h1 class="text__2">
-            Tingkatkan Hasil Tabungan Anda dengan Deposito
-          </h1>
-          <p class="text__3">
-            Nikmati bunga yang lebih tinggi daripada tabungan biasa dan pilihan
-            jangka waktu yang sesuai dengan kebutuhan Anda.
-          </p>
-        </div>
-        <div class="col-lg-6 d-md-12 mb-4 heading-right">
-          <div id="form-daftar-1" class="form-daftar">
-            <div class="card shadow">
-              <h4>Lorem Ipsum is simply dummy text of the printing for CTA</h4>
-              <form action="" id="submit-to-google-sheet1" class="mt-4">
-                <div class="mb-3">
-                  <label for="nama">Nama *</label>
-                  <br />
-                  <input
-                    type="text"
-                    class="form-input focus-form-input"
-                    id="nama"
-                    name="name"
-                    placeholder="Nama Lengkap Anda"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email">Email *</label>
-                  <br />
-                  <input
-                    type="email"
-                    class="form-input focus-form-input"
-                    id="email"
-                    name="email"
-                    placeholder="Alamat Email Anda"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="telepon">Telepon *</label>
-                  <br />
-                  <input
-                    type="text"
-                    class="form-input focus-form-input"
-                    id="telepon"
-                    name="telepon"
-                    placeholder="Nomor telepon / Whatsapp"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="produk">Pilihan Produk *</label>
-                  <br />
-                  <select class="focus-form-input" name="produk" id="produk1">
-                    <option selected>Pilih Produk Investasi Anda</option>
-                    <option value="D01">DEPOSITO BERJANGKA 1 BLN</option>
-                    <option value="D03">DEPOSITO BERJANGKA 3 BLN</option>
-                    <option value="D06">DEPOSITO BERJANGKA 6 BLN</option>
-                    <option value="D12">DEPOSITO BERJANGKA 12 BLN</option>
-                  </select>
-                </div>
-                <div class="mt-4">
-                  <button type="submit" class="btn-daftar send-btn">Mulai Sekarang</button>
-                  <button type="submit" class="btn-daftar loading-btn d-none" disabled>
-                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading... 
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-     </div>
+      <img src="assets/background/Banner-Hs.jpg" class="img-fluid" alt="Hariarta">
     </section>
 
-    <!-- form responsive -->
-    <section id="form-responsive" class="form-responsive">
-      <div class="container-lg">
-        <div id="form-daftar-2" class="form-daftar">
-            <div class="card shadow">
-              <h4>Lorem Ipsum is simply dummy text of the printing for CTA</h4>
-              <form action="" id="submit-to-google-sheet2" class="mt-4">
+    <!-- form daftar -->
+    <div id="form-daftar">
+        <div class="cards">
+            <h4 class="text-center">Isi form & dapatkan penawaran deposito eksklusif dari Hariarta</h4>
+            <form action="" id="submit-to-google-sheet" onsubmit="return validateForm()" class="mt-4" enctype="multipart/form-data">
                 <div class="mb-3">
-                  <label for="nama">Nama</label>
-                  <br />
-                  <input
-                    type="text"
-                    class="form-input focus-form-input"
-                    id="nama"
-                    name="name"
-                    placeholder="Nama Lengkap Anda"
-                  />
+                    <label for="nama">Nama</label>
+                    <input type="text" class="form-input focus-form-input" id="nama" name="name" placeholder="Nama Lengkap Anda" />
                 </div>
                 <div class="mb-3">
-                  <label for="email">Email</label>
-                  <br />
-                  <input
-                    type="email"
-                    class="form-input focus-form-input"
-                    id="email"
-                    name="email"
-                    placeholder="Alamat Email Anda"
-                  />
+                    <label for="email">Email</label>
+                    <input type="email" class="form-input focus-form-input" id="email" name="email" placeholder="Alamat Email Anda" />
                 </div>
                 <div class="mb-3">
-                  <label for="telepon">Telepon</label>
-                  <br />
-                  <input
-                    type="text"
-                    class="form-input focus-form-input"
-                    id="telepon"
-                    name="telepon"
-                    placeholder="Nomor telepon / Whatsapp"
-                  />
+                    <label for="telepon">Telepon</label>
+                    <input type="number" class="form-input focus-form-input" id="telepon" name="telepon" placeholder="Nomor telepon / Whatsapp" />
                 </div>
                 <div class="mb-3">
-                  <label for="produk">Pilihan Produk</label>
-                  <br />
-                  <select class="focus-form-input" name="produk" id="produk2">
-                    <option selected>Pilih Produk Investasi Anda</option>
-                    <option value="D01">DEPOSITO BERJANGKA 1 BLN</option>
-                    <option value="D03">DEPOSITO BERJANGKA 3 BLN</option>
-                    <option value="D06">DEPOSITO BERJANGKA 6 BLN</option>
-                    <option value="D12">DEPOSITO BERJANGKA 12 BLN</option>
-                  </select>
+                    <label for="produk">Pilihan Produk</label>
+                    <select class="focus-form-input" name="produk" id="produk">
+                        <option selected>Pilih Produk Investasi Anda</option>
+                        <option value="D01">DEPOSITO BERJANGKA 1 BLN</option>
+                        <option value="D03">DEPOSITO BERJANGKA 3 BLN</option>
+                        <option value="D06">DEPOSITO BERJANGKA 6 BLN</option>
+                        <option value="D12">DEPOSITO BERJANGKA 12 BLN</option>
+                    </select>
                 </div>
                 <div class="mt-4">
-                   <button type="submit" class="btn-daftar send-btn">Mulai Sekarang</button>
-                  <button type="submit" class="btn-daftar loading-btn d-none" disabled>
-                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading... 
-                  </button>
+                    <button type="submit" class="btn-modify-1 send-btn">Deposito Sekarang</button>
+                    <button type="submit" class="btn-modify-1 loading-btn d-none" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...
+                    </button>
                 </div>
-              </form>
-            </div>
-          </div>
-      </div>
-    </section>
+            </form>
+        </div>
+    </div>
     
     <!-- award -->
     <section id="award">
@@ -249,8 +160,8 @@
               <span><img src="./assets/icon/growth.png" alt="images"></span>
             </div>
             <div class="col">
-              <h3>Dapat bunga EXTRA cashback</h3>
-              <p>Anda bisa mendapatkan bunga menarik sekaligus cashback.</p>
+              <h3>Dapatkan bunga EXTRA besar</h3>
+              <p>Nabung pakai bunga 6,75 lebih berasa hasilnya.</p>
             </div>
            </div>
            <div class="col d-flex aling-items-center justify-content-between mb-4 mt-3">
@@ -272,7 +183,7 @@
             </div>
            </div>
            <div class="col-lg-12 mb-3 mt-4">
-               <a type="button" data-bs-toggle="modal" data-bs-target="#simulasiDep" class="btn-simulasi">Simulasi Deposito</a>
+               <a href="./assets/document/Compro-Hariarta.pdf" target="_blank" class="btn-simulasi">Unduh Company Profile</a>
            </div>
           </div>
           <div class="col-lg-6 bg-keuntungan">
@@ -293,8 +204,7 @@
           </div>
           <div class="col-md-6 text-center">
              <div class="col-lg-12 mb-3 mt-4 d-flex align-items-center justify-content-center">
-               <a href="#form-daftar-1" class="btn-open-tab d-none d-lg-block">Deposito Sekarang</a>
-               <a href="#form-daftar-2" class="btn-open-tab d-block d-lg-none">Deposito Sekarang</a>
+               <a href="#form-daftar" class="btn-open-tab">Deposito Sekarang</a>
             </div>
           </div>
         </div>
@@ -305,16 +215,15 @@
        <section id="langkah-dep" class="langkah-dep">
       <div class="container">
         <div class="row text-center align-items-center justify-content-center mb-4">
-          <div class="col mt-5 mb-4"><h3>Langkah-langkah<br>Membuka Desposito</h3></div>
+          <div class="col mt-5 mb-4"><h3>Langkah-langkah<br>Membuka Deposito</h3></div>
         </div>
         <div class="row align-items-center justify-content-center mb-4">
           <div class="col-xl-3">
             <div class="card shadow open-dep langkah__1 mb-4">
               <img src="./assets/icon/1.png" width="50" alt="">
               <h4>Isi Form Online</h4>
-              <p>Buka Deposito Bank Hariarta dengan mengisi form online. Dengan minimal penempatan Rp 100 juta serta jangka waktu 6, 9 dan 12 bulan (khusus penempatan dana baru).</p>
-              <a href="#form-daftar-1" class="btn-mulai d-none d-lg-block">Mulai Isi Form</a>
-              <a href="#form-daftar-2" class="btn-mulai d-block d-lg-none">Mulai Isi Form</a>
+              <p>Buka Deposito Bank Hariarta dengan mengisi form online. Dengan minimal penempatan Rp 5 juta serta jangka waktu 6, 9 dan 12 bulan (khusus penempatan dana baru).</p>
+              <a href="#form-daftar" class="btn-mulai">Mulai Isi Form</a>
             </div>
           </div>
           <div class="col-1 d-none d-xl-block text-center align-items-center justify-content-center">
@@ -324,10 +233,10 @@
             <img src="./assets/icon/cheveron-down.png" width="140px" alt="">
           </div>
           <div class="col-xl-3">
-            <div class="card shadow open-dep langkah__2 mb-4">
+            <div class="card shadow open-dep langkah__3 mb-4">
               <img src="./assets/icon/2.png" class="pt-4" width="50" alt="">
-              <h4>Dapatkan bunga tinggi dan aman</h4>
-              <p>Anda mendapatkan bunga tinggi s.d. 6.75% p.a. Aman dijamin Pemerintah (LPS). Deposito Anda lebih cepat berkembang dan aman karena dikelola secara profesional, terdaftar dan diawasi OJK, serta dijamin oleh Pemerintah (LPS).</p>
+              <h4>Uang Anda dikelola dengan baik oleh personal banker</h4>
+              <p>Kami menawarkan layanan personal banker yang handal, siap membantu Anda dalam merencanakan dan mengelola deposito Anda dengan cermat.</p>
             </div>
           </div>
            <div class="col-1 d-none d-xl-block text-center align-items-center justify-content-center">
@@ -337,10 +246,10 @@
             <img src="./assets/icon/cheveron-down.png" width="140px" alt="">
           </div>
           <div class="col-xl-3">
-            <div class="card shadow open-dep langkah__3 mb-4">
+            <div class="card shadow open-dep langkah__2 mb-4">
               <img src="./assets/icon/3.png" class="pt-4" width="50" alt="">
-              <h4>Donasi Paket Sembako</h4>
-              <p>Kita donasikan paket sembako kepada warga miskin yang membutuhkan. Semakin tinggi penempatan deposito Anda, semakin banyak paket sembako yang dapat kita donasikan.</p>
+              <h4>Dapatkan bunga tinggi dan aman</h4>
+              <p>Anda mendapatkan bunga tinggi s.d. 6.75% p.a. Aman dijamin Pemerintah (LPS). Deposito Anda lebih cepat berkembang dan aman karena dikelola secara profesional, terdaftar dan diawasi OJK, serta dijamin oleh Pemerintah (LPS).</p>
             </div>
           </div>
         </div>
@@ -348,7 +257,7 @@
     </section>
 
     <!-- testimoni -->
-    <section id="testimoni" class="testimoni">
+    <!-- <section id="testimoni" class="testimoni">
       <div class="container">
         <div class="row text-center">
             <div class="col mt-5 mb-4"><h3>Apa Kata Mereka</h3></div>
@@ -420,19 +329,18 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- CTA -->
     <section id="cta" class="cta">
       <div class="container">
         <div class="row d-flex align-items-center justify-content-between pt-4 pb-3">
           <div class="col-md-6 text__cta">
-            <h3>Dapatkan bunga tinggi hingga 6,75% + Cashback 1 Juta dengan deposito Bank Hariarta.</h3>
+            <h3>Dapatkan bunga tinggi hingga 6,75% dan penawaran ekslusif lainnya dengan deposito di Bank Hariarta.</h3>
           </div>
           <div class="col-md-6 text-center">
              <div class="col-lg-12 mb-3 mt-4 d-flex align-items-center justify-content-center">
-               <a id="btn-deposito" href="#form-daftar-1" class="btn-open-tab d-none d-lg-block">Deposito Sekarang</a>
-               <a href="#form-daftar-2" class="btn-open-tab d-block d-lg-none">Deposito Sekarang</a>
+               <a id="btn-deposito" href="#form-daftar" class="btn-open-tab">Deposito Sekarang</a>
             </div>
           </div>
         </div>
@@ -533,8 +441,10 @@
               </div> -->
             
               <label for="nominal">Nominal penempatan</label>
-              <input type="text" id="nominalValue" name="nominalValue" placeholder="Rp 5,000,000.-">
-              <input type="range" id="nominal" name="nominal" min="1" max="20000" step="1" value="1">
+              <div id="nominalVal">Rp
+                <input type="text" id="nominalValue" name="nominalValue" oninput="this.value = formatRupiah(this.value)" placeholder="5.000.000" autocomplete="off">
+              </div>
+              <input type="range" id="nominal" name="nominal" min="5000000" max="100000000000" step="1" value="1">
               <div class="d-flex justify-content-between">
                 <div>Rp 5 juta</div>
                 <div>Rp 100 miliar</div>
@@ -544,13 +454,13 @@
             <div class="form-group mb-3">
               <label for="tenor">Tenor</label>
               <h3 id="tenorValue">1 bulan</h3>
-              <input type="range" id="tenor" name="tenor" min="1" max="12" step="1" value="1" oninput="checkTenor(this.value)">
-              <!-- <datalist id="tenorList">
+              <input type="range" id="tenor" name="tenor" min="1" max="4" step="1" value="1" oninput="checkTenor(this.value)" list="tenorList">
+              <datalist id="tenorList">
                 <option value="1">1 bulan</option>
-                <option value="3">3 bulan</option>
-                <option value="6">6 bulan</option>
-                <option value="12">12 bulan</option>
-              </datalist> -->
+                <option value="2">3 bulan</option>
+                <option value="3">6 bulan</option>
+                <option value="4">12 bulan</option>
+              </datalist>
                <div class="d-flex justify-content-between">
                   <div>1 bulan</div>
                   <div>12 bulan</div>
@@ -571,13 +481,12 @@
 
           </div>
           <div class="modal-footer">
-            <a href="#" class="btn-open-dep">Buka Tabungan</a>
+            <a href="#form-daftar" class="btn-open-dep d-none d-lg-block">Deposito Sekarang</a>
           </div>
         </div>
       </div>
     </div>
-    
-
+  
 
     <!-- Bootstrap js -->
     <script src="./app/bootstrap/js/bootstrap.min.js"></script>
@@ -589,9 +498,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script type="text/javascript">
       var inputs = document.querySelectorAll('.form-input');
-      var select1 = document.getElementById("produk1");
-      var select2 = document.getElementById("produk2");
-
+      var select = document.getElementById("produk");
       inputs.forEach(function(input) {
           input.addEventListener('input', function() {
               if (this.value.trim() !== "") {
@@ -602,14 +509,7 @@
           });
       });
 
-      select1.addEventListener('change', function() {
-          if (this.value !== "") {
-              this.classList.add("active-form-input");
-          } else {
-              this.classList.remove("active-form-input");
-          }
-      });
-      select2.addEventListener('change', function() {
+      select.addEventListener('change', function() {
           if (this.value !== "") {
               this.classList.add("active-form-input");
           } else {
@@ -619,8 +519,23 @@
     </script>
 
     <script>
+     function validateForm() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+        var telepon = document.getElementById("telepon").value;
+        var produk = document.getElementById("produk").value;
+
+        if (nama.trim() === "" || email.trim() === "" || telepon.trim() === "" || produk === "Pilih Produk Investasi Anda") {
+          alert("Mohon lengkapi semua data yang diperlukan.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+
+    <script>
       function checkTenor(value) {
-        var validValues = [1, 3, 6, 12];
+        var validValues = [1, 2, 3, 4];
         if (!validValues.includes(value)) {
           // nilai dekat dengan nilai yang dipilih
           var closestValue = validValues.reduce(function(prev, curr) {
@@ -630,6 +545,22 @@
           document.getElementById("tenor").value = closestValue;
         }
         document.getElementById("tenorValue").textContent = value + " bulan";
+      }
+
+      function formatRupiah(angka) {
+            let numberString = angka.replace(/[^,\d]/g, "").toString();
+            let split = numberString.split(",");
+            let sisa = split[0].length % 3;
+            let rupiah = split[0].substr(0, sisa);
+            let ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+            if (ribuan) {
+                separator = sisa ? "." : "";
+                rupiah += separator + ribuan.join(".");
+            }
+
+            rupiah = split[1] !== undefined ? rupiah + "," + split[1] : rupiah;
+            return rupiah;
       }
   </script>
   </body>

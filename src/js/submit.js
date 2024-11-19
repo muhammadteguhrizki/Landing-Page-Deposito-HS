@@ -1,7 +1,6 @@
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbyzeFogB4aJNJGo5O6fsoIMROp_1aC6UAXjWnm4rPEgYKDkKz-87na4wk1BveNQwac67g/exec";
-const form1 = document.getElementById("submit-to-google-sheet1");
-const form2 = document.getElementById("submit-to-google-sheet2");
+const form = document.getElementById("submit-to-google-sheet");
 
 function handleSubmit(form) {
   form.addEventListener("submit", (e) => {
@@ -11,6 +10,12 @@ function handleSubmit(form) {
 
     submitButton.classList.add("d-none");
     loadingButton.classList.remove("d-none");
+
+    if (form === form && !validateForm()) {
+      submitButton.classList.remove("d-none");
+      loadingButton.classList.add("d-none");
+      return; // Hentikan pengiriman form jika validasi gagal
+    }
 
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) => {
@@ -28,5 +33,4 @@ function handleSubmit(form) {
   });
 }
 
-handleSubmit(form1);
-handleSubmit(form2);
+handleSubmit(form);

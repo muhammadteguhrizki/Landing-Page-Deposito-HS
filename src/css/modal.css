@@ -62,7 +62,9 @@ label {
   /* font-weight: bold; */
 }
 
+#nominalVal,
 #nominalValue {
+  color: var(--secodColor);
   background-color: transparent;
   border: 0;
   outline: none;
